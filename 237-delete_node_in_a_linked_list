@@ -1,0 +1,16 @@
+https://leetcode.com/problems/delete-node-in-a-linked-list/description/
+
+/**
+ * Definition for singly-linked list.
+ * public class ListNode {
+ *     int val;
+ *     ListNode next;
+ *     ListNode(int x) { val = x; }
+ * }
+ */
+class Solution {
+    public void deleteNode(ListNode node) {
+        node.val = node.next.val;
+        node.next = node.next.next; 
+    }
+} // this method only works because the node is not last node as mentioned in the question and values are unique so we are just shifting the values
